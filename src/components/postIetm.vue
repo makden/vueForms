@@ -17,7 +17,7 @@
    },
    methods: {
       remote(){
-          
+          alert("remte");
          }
       },
    }
