@@ -2,13 +2,13 @@
    <div class="post">
       <h5>{{ post.title }}</h5>
       <p>{{ post.body }}</p>
-      <my-button @click="remote">Удалить</my-button>
+      <my-button @click="$emit('removeItem',post)">Удалить</my-button>
    </div>
 
 </template>
 <script>
 
-   export default {
+export default {
    props:{
       post:{
          type:Object,
@@ -16,11 +16,11 @@
       }
    },
    methods: {
-      remote(){
-          alert("remte");
-         }
-      },
-   }
+      // remote(){
+      //   console.log(key); 
+      // }
+   },
+}
 </script>
 <style>
      .post{

@@ -4,6 +4,7 @@
     />
     <postList
       :posts="posts"
+      @removeItem="removePost"
     />
 
 </template>
@@ -29,6 +30,9 @@
     methods:{
       addPost(post){
         this.posts.push(post);
+      },
+      removePost(post){
+        this.posts = this.posts.filter(item => item.id !== post.id)
       }
     }
   }

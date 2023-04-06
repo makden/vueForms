@@ -2,8 +2,9 @@
    <h3>Список постов</h3>
 
    <PostIetm 
-      v-for="post in posts"
-      :post="post" 
+      v-for="post in posts" 
+      :post="post"
+      @removeItem="$emit('removeItem',post)"
    />
 </template>
 <script>
