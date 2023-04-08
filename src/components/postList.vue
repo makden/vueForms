@@ -7,6 +7,7 @@
       @removeItem="$emit('removeItem',post)"
    />
 </template>
+
 <script>
 import PostIetm from './postIetm.vue';
 

@@ -3,7 +3,9 @@
       <form action="">
          <input type="text" placeholder="Введите заголовок" v-model="post.title">
          <input type="text" placeholder="Введите описание" v-model="post.body">
-         <input type="button" @click="addPost" value="Add">
+         <my-input  v-model="post.body"></my-input>
+
+         <my-button @click="addPost">Добавить</my-button>
       </form>
    </div>
 </template>
