@@ -1,10 +1,11 @@
 <template>
+   fff
    <input type="text" :value="modelValue" @input="updateInput" >
 </template>
 
 <script>
    export default {
-
+      
       props:{
          mdoelValue:[String,Number]
       },

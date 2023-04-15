@@ -1,14 +1,17 @@
 <template>
+   
    <button><slot></slot></button>
 </template>
 
 <script>
    export default {
-      
+      components:{
+         "name":myButton
+      }
    }
 </script>
 
-<style>
+<style scoped>
    my-button{
       border:solid 1px #aaa;
       background-color: #eee;
