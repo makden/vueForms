@@ -6,7 +6,7 @@
 <script>
    export default {
       components:{
-         "name":myButton
+         "name":"myButton"
       }
    }
 </script>

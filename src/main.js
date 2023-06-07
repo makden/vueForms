@@ -4,7 +4,7 @@ import App from '@/App.vue'
 import  components  from './components/UI/index.js'
 console.log(components)
 const app = createApp(App)
-components.forEach(component => {
+components.forEach(component => {    
    app.component(component.name, component)
    
 });
