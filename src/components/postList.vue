@@ -1,5 +1,5 @@
 <template>
-   <h3>Список постов</h3>
+   <h3>Список постов!</h3>
 
    <PostIetm 
       v-for="post in posts" 

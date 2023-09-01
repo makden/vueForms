@@ -2,7 +2,7 @@
    <div class="post">
       <h5>{{ post.title }}</h5>
       <p>{{ post.body }}</p>
-      <my-button @click="$emit('removeItem',post)">Удалить</my-button>
+      <myButtons @click="$emit('removeItem',post)">Удалить!</myButtons>
    </div>
 
 </template>
@@ -19,7 +19,7 @@ export default {
       // remote(){
       //   console.log(key); 
       // }
-   },
+   }
 }
 </script>
 <style>

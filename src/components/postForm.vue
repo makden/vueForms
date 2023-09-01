@@ -1,18 +1,22 @@
 <template lang="">
    <div>
       <form action="">
-         <input type="text" placeholder="Введите заголовок" v-model="post.title">
-         <input type="text" placeholder="Введите описание" v-model="post.body">
-         <my-input  v-model="post.body"></my-input>
-
+         <my-input  :modelValue=arrVals></my-input>
+         <hr>
+            
          <my-button @click="addPost">Добавить</my-button>
       </form>
    </div>
 </template>
 <script>
+import myinput from "./UI/myInput.vue";
 export default {
+   components:{
+      myinput,
+   },
    data(){
       return {
+         arrVals:["Один","Два","Три","Тристо","Тари","Четыре","Пять"],
          post:{
             title:'',
             body:''
@@ -20,6 +24,11 @@ export default {
       }
    }, 
    methods:{
+
+      vvv(){
+            this.vvv="df"
+      },
+
     addPost(){
       
       this.post.id = Date.now();

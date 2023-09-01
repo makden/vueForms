@@ -1,17 +1,38 @@
 <template>
-   fff
-   <input type="text" :value="modelValue" @input="updateInput" >
+   <input type="text"  @input="updateInput" >
+   <ul v-for="arrVal in modelValue" >
+         <li> {{arrVal}}</li>
+         </ul>
+
+   <hr>
+   
+   <ul v-for="arrVal in arrVals" >
+         <li> {{arrVal}}</li>
+         </ul>
 </template>
 
 <script>
    export default {
-      
+      name:'myInput',
       props:{
-         mdoelValue:[String,Number]
+         modelValue:Array,
+         
       },
+     data(){
+      return {
+         arrVals:Array
+      }
+     },
       methods: {
          updateInput(event){
-            this.$emit('update:modelValue',event.target.value)
+
+             this.arrVals = this.modelValue.filter(function (language) {
+              return language.startsWith(event.target.value)
+            })
+
+           
+            
+            //this.$emit('update:modelValue',event.target.value)
          }
       },
    }

@@ -14,7 +14,8 @@
   import  postList  from "./components/postList.vue";
   export default{
     components:{
-      postForm,postList
+      postForm,
+      postList
     },
     data(){
       return {
