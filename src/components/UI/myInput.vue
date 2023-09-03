@@ -27,7 +27,7 @@ export default {
          this.arrVals = this.modelValue.filter(function (book) {
             return book.indexOf(event.target.value) !== -1;
          })
-         this.displayListData = this.arrVals.length <=3;
+         this.displayListData = this.arrVals.length <=3; // Покать подсказу когда мешьше или = 3
          
          this.val = event.target.value;
       },
